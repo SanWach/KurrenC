@@ -16,5 +16,111 @@ h1{
 
 p{
     margin-top: 25px;
-    font-size: 18px;
+    font-size: 21px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+.input-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  box-shadow: 1px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  height: 45px;
+  border: none;
+  font-size: 38px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    border: none;
+  border-bottom: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+
+#from-currency {
+    box-shadow: 1px;
+    border-radius: 4px;
+    background-color: white;
+    height: 45px;
+    border: none;
+    font-size: 38px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+#to-currency{
+    box-shadow: 1px;
+    border-radius: 4px;
+    background-color: white;
+    height: 45px;
+    border: none;
+    font-size: 38px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}  
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  }
+
+  
+#result {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
