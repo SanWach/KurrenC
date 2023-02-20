@@ -14,13 +14,30 @@ const exchangeRates = {
   };
   
   function convertCurrency(amount, fromCurrency, toCurrency) {
-    if (exchangeRates[fromCurrency] && exchangeRates[fromCurrency][toCurrency]) {
-      return amount * exchangeRates[fromCurrency][toCurrency];
-    } else {
-      throw new Error("Conversion not available");
+    // Replace commas with periods
+    amount = amount.replace(',', '.');
+  
+    // Parse the input amount as a number
+    const numericAmount = parseFloat(amount);
+  
+    // Check if the numericAmount is not a number or is NaN
+    if (isNaN(numericAmount)) {
+      throw new Error('Invalid amount');
     }
+  
+    // Check if the fromCurrency and toCurrency are valid
+    if (!exchangeRates[fromCurrency] || !exchangeRates[toCurrency]) {
+      throw new Error('Invalid currency');
+    }
+  
+    // Convert the currency
+    const exchangeRate = exchangeRates[fromCurrency][toCurrency];
+    const convertedAmount = numericAmount * exchangeRate;
+  
+    // Round the converted amount to 2 decimal places
+    return Math.round(convertedAmount * 100) / 100;
   }
-
+  
 // Wait for the HTML document to finish loading
 document.addEventListener('DOMContentLoaded', function() {
     // Get references to the form and input fields
