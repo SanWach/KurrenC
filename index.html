@@ -5,43 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KurrenC - Quick currency converter</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.11/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="main.js"></script>
 </head>
-<body>
-    <h1>Quick Currency Converter</h1>
-    <p>Calculate the price in your domestic currency</p>
+<body class="bg-white text-gray-800 font-sans text-center">
+    <h1 class="text-4xl font-bold mt-8 mb-3">Quick Currency Converter</h1>
+    <p class="text-lg mb-5">Calculate the price in your domestic currency</p>
 
-    <div class="conv">
-    <form>
-        <div class="input-group">
-            <label for="amount">Amount</label>
-            <input type="number" step="0.01" id="amount" required>
-          </div>
-          <div class="input-group">
-            <label for="from-currency">From currency</label>
-            <select id="from-currency" required>
-              <option value="">Select currency</option>
-              <option value="USD">USD</option>
-              <option value="CHF">CHF</option>
-              <option value="UAH">UAH</option>
-            </select>
-          </div>
-          <div class="input-group">
-            <label for="to-currency">To currency</label>
-            <select id="to-currency" required>
-              <option value="">Select currency</option>
-              <option value="USD">USD</option>
-              <option value="CHF">CHF</option>
-              <option value="UAH">UAH</option>
-            </select>
-          </div>
-        <button type="submit"class="button" value="Input Button">Convert</button>
-      </form>
+    <div class="mx-auto w-full max-w-md">
+        <form class="space-y-6">
+            <div class="space-y-1">
+                <label for="amount" class="font-semibold">Amount</label>
+                <input type="number" step="0.01" id="amount" required class="w-full border-b-2 border-gray-300 focus:border-blue-500 py-2 px-4 outline-none">
+            </div>
+            <div class="space-y-1">
+                <label for="from-currency" class="font-semibold">From currency</label>
+                <select id="from-currency" required class="w-full border-b-2 border-gray-300 focus:border-blue-500 py-2 px-4 outline-none">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="space-y-1">
+                <label for="to-currency" class="font-semibold">To currency</label>
+                <select id="to-currency" required class="w-full border-b-2 border-gray-300 focus:border-blue-500 py-2 px-4 outline-none">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" value="Input Button">Convert</button>
+        </form>
 
-      <div id="result"></div>
-    
+        <div id="result" class="mt-6 text-lg"></div>
     </div>
-    
 </body>
 </html>
